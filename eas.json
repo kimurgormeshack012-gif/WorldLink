@@ -1,7 +1,5 @@
+
 {
-  "cli": {
-    "version": ">= 16.0.0"
-  },
   "build": {
     "preview": {
       "distribution": "internal",
@@ -16,3 +14,4 @@
     }
   }
 }
+
