@@ -1,31 +1,38 @@
-
 name: Build Android APK
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+workflow_dispatch:
+push:
+branches:
+- main
 
 jobs:
-  build:
-    name: Build APK
-    runs-on: ubuntu-latest
+build:
+name: Build APK
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+  - name: Setup Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: 20
+      cache: npm
 
-      - name: Build Android APK with EAS
-      
-      - name: Install dependencies
-        run: npm install
+  - name: Install dependencies
+    run: npm install
 
-        run: npx eas-cli@latest build --platform android --profile preview --non-interactive
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+  - name: Install EAS CLI
+    run: npm install -g eas-cli
+
+  - name: Verify Expo login
+    run: eas whoami
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+  - name: Build Android APK
+    run: eas build --platform android --profile preview --non-interactive
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
