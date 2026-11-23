@@ -1,3 +1,4 @@
+
 {
   "expo": {
     "name": "WorldLink",
@@ -13,22 +14,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "PASTE_YOUR_EXISTING_FULL_PROJECT_ID_HERE"
+        "projectId": "9503d153-f9eb-4239-a7f0-REPLACE-WITH-REST-OF-ID"
       }
     }
   }
-}{
-  "expo": {
-    "name": "WorldLink",
-    "slug": "worldlink-social",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "userInterfaceStyle": "dark",
-    "android": {"package": "com.worldlink.social", "versionCode": 1},
-    "splash": {"backgroundColor": "#090E2D"}
-  }"extra": {
-  "eas": {
-    "projectId": "9503d153-f9eb-4239-a7f0-e8df95b4f721"
-  }
-  }
 }
+
