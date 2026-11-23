@@ -1,8 +1,11 @@
 {
   "expo": {
     "name": "WorldLink",
-    "slug": "worldlink-social",
+    "slug": "worldlink-app",
     "version": "1.0.0",
+    "cli": {
+  "appVersionSource": "remote"
+    }
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "android": {
