@@ -1,4 +1,3 @@
-
 {
   "expo": {
     "name": "WorldLink",
@@ -14,10 +13,8 @@
     },
     "extra": {
       "eas": {
-        "projectId":
-        9503d153-f9eb-4239-a7f0-e8df95b4f721
+        "projectId": "9503d153-f9eb-4239-a7f0-e8df95b4f721"
       }
     }
   }
 }
-
