@@ -5,6 +5,25 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.worldlink.social"
+    },
+    "splash": {
+      "backgroundColor": "#090E2D"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "PASTE_YOUR_EXISTING_FULL_PROJECT_ID_HERE"
+      }
+    }
+  }
+}{
+  "expo": {
+    "name": "WorldLink",
+    "slug": "worldlink-social",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
     "android": {"package": "com.worldlink.social", "versionCode": 1},
     "splash": {"backgroundColor": "#090E2D"}
   }"extra": {
