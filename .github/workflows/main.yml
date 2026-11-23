@@ -22,6 +22,10 @@ jobs:
           node-version: 20
 
       - name: Build Android APK with EAS
+      
+      - name: Install dependencies
+        run: npm install
+
         run: npx eas-cli@latest build --platform android --profile preview --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
