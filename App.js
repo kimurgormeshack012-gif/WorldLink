@@ -141,33 +141,17 @@ export default function App() {
       return;
     }
 
-    if (!email.includes('@') || password.length < 6) {
-      Alert.alert('Check your details', 'Enter a valid email and a password of at least 6 characters.');
+      if (!email.includes('@') || password.length < 6) {
+      Alert.alert(
+        'Check your details',
+        'Enter a valid email address and a password with at least 6 characters.'
+      );
       return;
     }
 
     setScreen('App');
     setTab('Home');
   };
-
-  const [resetEmail, setResetEmail] = useState('');
-
-    
-const login = () => {
-  if (!email.trim() || !password.trim()) {
-    Alert.alert('Missing details', 'Please enter your email and password.');
-    return;
-  }
-
-  if (!email.includes('@') || password.length < 6) {
-    Alert.alert('Check your details', 'Enter a valid email and password.');
-    return;
-  }
-
-  setScreen('App');
-  setTab('Home');
-};
-
 
   const Header = () => (
     <View style={s.header}>
