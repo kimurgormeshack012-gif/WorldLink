@@ -187,7 +187,7 @@ const register = () => {
   const Nav = () => {
     const items = [
       ['Home', '⌂'],
-      ['Discover', '⌕'],
+      ['Explore', '⌕'],
       ['Create', '＋'],
       ['Messages', '✉'],
       ['Profile', '◉']
