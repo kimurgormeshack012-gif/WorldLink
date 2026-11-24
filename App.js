@@ -45,32 +45,49 @@ const Avatar({ name = 'W', size = 48, online = false }) {
   );
 }
 
-function Badge({ title, color = C.blue, symbol = '✓' }) {
+
+const BADGE_COLORS = {
+  member: '#38BDF8',
+  founder: '#F5B942',
+  verified: '#22C55E',
+  creator: '#A78BFA',
+};
+
+function Badge({ title, variant = 'verified' }) {
+  const color = BADGE_COLORS[variant] || BADGE_COLORS.verified;
+
   return (
     <View
       style={{
-        backgroundColor: color + '22',
-        borderColor: color,
-        borderWidth: 1,
-        borderRadius: 20,
-        paddingHorizontal: 9,
-        paddingVertical: 5,
         flexDirection: 'row',
         alignItems: 'center',
-        marginRight: 6,
-        marginTop: 5,
+        alignSelf: 'flex-start',
+        backgroundColor: color + '18',
+        borderColor: color + '80',
+        borderWidth: 1,
+        borderRadius: 30,
+        paddingHorizontal: 11,
+        paddingVertical: 6,
+        marginRight: 7,
+        marginTop: 6,
       }}
     >
-      <Text style={{
-        color,
-        fontSize: 10,
-        fontWeight: '900',
-      }}>
-        {symbol} {title}
+      <Text
+        style={{
+          color: color,
+          fontSize: 11,
+          fontWeight: '900',
+          letterSpacing: 0.6,
+        }}
+      >
+        {variant === 'verified' ? '✓' :
+         variant === 'founder' ? '♛' :
+         variant === 'creator' ? '★' : '✦'} {title}
       </Text>
     </View>
   );
 }
+
 
 function Label({ children }) {
   return <Text style={s.label}>{children}</Text>;
@@ -219,6 +236,13 @@ const register = () => {
       ['Messages', '✉'],
       ['Profile', '◉']
     ];
+
+<View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+  <Badge title="VERIFIED" variant="verified" />
+  <Badge title="FOUNDER" variant="founder" />
+  <Badge title="CREATOR" variant="creator" />
+  <Badge title="MEMBER" variant="member" />
+</View>
 
     return (
       <View style={s.nav}>
