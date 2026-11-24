@@ -309,7 +309,7 @@ const register = () => {
       <View style={s.welcomeRow}>
         <View>
           <Text style={s.eyebrow}>YOUR COMMUNITY</Text>
-          <Text style={s.screenTitle}>Discover your world.</Text>
+          <Text style={s.screenTitle}>Connect with Your World</Text>
         </View>
         <Avatar name={name || 'W'} size={43} />
       </View>
