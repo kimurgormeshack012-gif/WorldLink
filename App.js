@@ -135,23 +135,28 @@ export default function App() {
     );
   };
 
-  const register = () => {
-    if (!name.trim() || !email.trim() || !password.trim()) {
-      Alert.alert('Missing details', 'Please complete all fields.');
-      return;
-    }
 
-      if (!email.includes('@') || password.length < 6) {
-      Alert.alert(
-        'Check your details',
-        'Enter a valid email address and a password with at least 6 characters.'
-      );
-      return;
-    }
+const register = () => {
+  if (!name.trim() || !email.trim() || !password.trim()) {
+    Alert.alert(
+      'Missing details',
+      'Please fill in all required fields.'
+    );
+    return;
+  }
 
-    setScreen('App');
-    setTab('Home');
-  };
+  if (!email.includes('@') || password.length < 6) {
+    Alert.alert(
+      'Check your details',
+      'Enter a valid email address and a password with at least 6 characters.'
+    );
+    return;
+  }
+
+  setScreen('App');
+  setTab('Home');
+};
+
 
   const Header = () => (
     <View style={s.header}>
