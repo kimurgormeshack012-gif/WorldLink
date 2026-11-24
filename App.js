@@ -339,7 +339,21 @@ const register = () => {
         </TouchableOpacity>
         <Text style={s.heroGlobe}>🌍</Text>
       </View>
+<View style={s.buyDataCard}>
+  <View style={s.buyDataInfo}>
+    <Text style={s.buyDataTitle}>BUY DATA</Text>
+    <Text style={s.buyDataDescription}>
+      Stay connected with affordable internet bundles.
+    </Text>
+  </View>
 
+  <TouchableOpacity
+    style={s.buyDataButton}
+    onPress={() => goTab('Buy Data')}
+  >
+    <Text style={s.buyDataButtonText}>Buy Now →</Text>
+  </TouchableOpacity>
+</View>
       <Stories />
 
       <View style={s.sectionRow}>
@@ -918,3 +932,35 @@ const s = StyleSheet.create({
     fontSize: 14, marginTop: 13
   }
 });
+buyDataCard: {
+  backgroundColor: '#151F3A',
+  borderRadius: 18,
+  padding: 18,
+  marginVertical: 15,
+  borderWidth: 1,
+  borderColor: '#287BFF',
+},
+buyDataInfo: {
+  marginBottom: 15,
+},
+buyDataTitle: {
+  color: '#FFFFFF',
+  fontSize: 18,
+  fontWeight: 'bold',
+},
+buyDataDescription: {
+  color: '#AAB7D0',
+  fontSize: 13,
+  marginTop: 6,
+},
+buyDataButton: {
+  backgroundColor: '#287BFF',
+  padding: 13,
+  borderRadius: 12,
+  alignItems: 'center',
+},
+buyDataButtonText: {
+  color: '#FFFFFF',
+  fontWeight: 'bold',
+  fontSize: 15,
+},
