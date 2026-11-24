@@ -150,11 +150,7 @@ export default function App() {
     setTab('Home');
   };
 
-  const login = () => {
-    if (!email.trim() || !password.trim()) {
-      Alert.alert('Missing details', 'Enter your email and password.');
-      return;
-    }
+  const [resetEmail, setResetEmail] = useState('');
 
     Alert.alert(
       'Demo login',
