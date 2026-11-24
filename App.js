@@ -31,7 +31,7 @@ function Button({ title, onPress, secondary = false }) {
   );
 }
 
-function Avatar({ name = 'W', size = 48, online = false }) {
+const Avatar({ name = 'W', size = 48, online = false }) {
   return (
     <View style={[
       s.avatar,
@@ -152,15 +152,22 @@ export default function App() {
 
   const [resetEmail, setResetEmail] = useState('');
 
-    Alert.alert(
-      'Demo login',
-      'Real account authentication will be connected when we add the backend.',
-      [{ text: 'Continue', onPress: () => {
-        setScreen('App');
-        setTab('Home');
-      }}]
-    );
-  };
+    
+const login = () => {
+  if (!email.trim() || !password.trim()) {
+    Alert.alert('Missing details', 'Please enter your email and password.');
+    return;
+  }
+
+  if (!email.includes('@') || password.length < 6) {
+    Alert.alert('Check your details', 'Enter a valid email and password.');
+    return;
+  }
+
+  setScreen('App');
+  setTab('Home');
+};
+
 
   const Header = () => (
     <View style={s.header}>
