@@ -30,8 +30,7 @@ function Button({ title, onPress, secondary = false }) {
     </TouchableOpacity>
   );
 }
-
-const Avatar({ name = 'W', size = 48, online = false }) {
+const Avatar = ({ name = 'W', size = 48, online = false }) => {
   return (
     <View style={[
       s.avatar,
