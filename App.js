@@ -228,14 +228,14 @@ const register = () => {
     </View>
   );
 
-  const Nav = () => {
-    const items = [
-      ['Home', '⌂'],
-      ['Explore', '⌕'],
-      ['Create', '＋'],
-      ['Messages', '✉'],
-      ['Profile', '◉']
-    ];
+  
+const NAV_ITEMS = [
+  { name: 'Home', icon: '⌂' },
+  { name: 'Connect', icon: '♧' },
+  { name: 'Create', icon: '+' },
+  { name: 'Alerts', icon: '♧' },
+  { name: 'Profile', icon: '◉' },
+];
 
 <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
   <Badge title="VERIFIED" variant="verified" />
