@@ -45,6 +45,33 @@ const Avatar({ name = 'W', size = 48, online = false }) {
   );
 }
 
+function Badge({ title, color = C.blue, symbol = '✓' }) {
+  return (
+    <View
+      style={{
+        backgroundColor: color + '22',
+        borderColor: color,
+        borderWidth: 1,
+        borderRadius: 20,
+        paddingHorizontal: 9,
+        paddingVertical: 5,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginRight: 6,
+        marginTop: 5,
+      }}
+    >
+      <Text style={{
+        color,
+        fontSize: 10,
+        fontWeight: '900',
+      }}>
+        {symbol} {title}
+      </Text>
+    </View>
+  );
+}
+
 function Label({ children }) {
   return <Text style={s.label}>{children}</Text>;
 }
