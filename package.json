@@ -10,10 +10,11 @@
     "build:apk": "eas build --platform android --profile preview"
   },
   "dependencies": {
-    "expo": "~58.0.0",
-    "react": "19.3.0",
-    "react-native": "0.88.0"
-  },
+  "expo": "~58.0.0",
+  "react": "19.3.0",
+  "react-native": "0.88.0",
+  "expo-image-picker": "~58.0.10"
+},
   "devDependencies": {
     "@types/react": "~19.2.0",
     "typescript": "~5.9.2"
