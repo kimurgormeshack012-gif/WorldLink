@@ -10,6 +10,7 @@
     "build:apk": "eas build --platform android --profile preview"
   },
   "dependencies": {
+    "dotenv": "^16.4.7"
   "expo": "~58.0.0",
   "react": "19.3.0",
   "react-native": "0.88.0",
